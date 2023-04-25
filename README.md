@@ -15,13 +15,13 @@ Ribbon的核心组件有，ILoadBalancer、IRule和IPing。
 3.核心组件ILoadBalancer
 大家不用猜也知道，这个ILoadBalancer 肯定是一个接口，肯定会有很多的实现
 
-![](D:\Ribbon\img\20210126194829782.png)
+![](https://raw.githubusercontent.com/yuluofengchuiqu/Ribbon/main/img/20210126194829782.png)
 
 这个就是ILoadBalancer的默认实现ZoneAwareLoadBalancer。
 
-![](D:\Ribbon\img\99247780566a698b545f143daba45ad7.png)、
+![](https://raw.githubusercontent.com/yuluofengchuiqu/Ribbon/main/img/99247780566a698b545f143daba45ad7.png)
 
-![](D:\Ribbon\img\20210126194858493.png)
+![](https://raw.githubusercontent.com/yuluofengchuiqu/Ribbon/main/img/20210126194858493.png)
 
 上面两张图，可以看到ZoneAwareLoadBalancer的继承关系。
 
@@ -29,9 +29,9 @@ Ribbon的核心组件有，ILoadBalancer、IRule和IPing。
 
 怎么选择对应的服务实例的呢？大家看看ZoneAwareLoadBalancer里面有个chooseServer方法，这个就是选择服务实例的方法，但是最后还是走的是BaseLoadBalancer里面的chooseServer方法。
 
-![](D:\Ribbon\img\20210126194936507.png)
+![](https://raw.githubusercontent.com/yuluofengchuiqu/Ribbon/main/img/20210126194936507.png)
 
-![](D:\Ribbon\img\17d8b2166030c7694c5f3421b906c90a.png)
+![](https://raw.githubusercontent.com/yuluofengchuiqu/Ribbon/main/img/17d8b2166030c7694c5f3421b906c90a.png)
 
 看到这里还是不知道怎么从服务实例的集合里面选择出来一个，接下来就要看Ribbon的另外一个组件IRule了。
 
